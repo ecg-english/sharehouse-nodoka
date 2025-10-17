@@ -1,6 +1,6 @@
 'use client'
 
-import { FaEnvelope, FaPhone, FaLine, FaHome, FaFileAlt, FaCheckCircle, FaHandshake, FaKey, FaMailbox } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaLine, FaHome, FaFileAlt, FaCheckCircle, FaHandshake, FaKey } from 'react-icons/fa'
 
 const StepDetails = () => {
   const stepDetails = [
@@ -277,7 +277,7 @@ const StepDetails = () => {
                 <div className="border border-nodoka-orange rounded-lg p-6">
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-nodoka-orange rounded-full flex items-center justify-center mr-4">
-                      <FaMailbox className="text-white text-xl" />
+                      <FaEnvelope className="text-white text-xl" />
                     </div>
                     <div>
                       <h4 className="font-bold text-nodoka-dark mb-2">{step.address.title}</h4>

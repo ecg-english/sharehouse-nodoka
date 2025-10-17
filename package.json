@@ -11,6 +11,7 @@
     "deploy": "npm run build && touch out/.nojekyll && git add out/ && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "framer-motion": "^12.23.24",
     "leaflet": "^1.9.4",
     "next": "14.0.4",
     "react": "^18",
