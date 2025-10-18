@@ -12,6 +12,7 @@
     "deploy": "npm run build:prod && touch out/.nojekyll && git add out/ && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^2.0.1",
     "framer-motion": "^12.23.24",
     "leaflet": "^1.9.4",
     "next": "14.0.4",

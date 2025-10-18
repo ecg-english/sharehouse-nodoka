@@ -5,14 +5,14 @@ import { FaMapMarkerAlt, FaTrain, FaCar, FaShoppingBag, FaUtensils, FaBook, FaDu
 
 const AccessSection = () => {
   const facilities = [
-    { icon: FaStore, name: '商店街', distance: '板宿駅直結' },
-    { icon: FaShoppingBag, name: 'コンビニ', distance: '徒歩1分' },
-    { icon: FaDumbbell, name: 'トレーニングジム', distance: '徒歩3分' },
-    { icon: FaCoffee, name: 'カフェ', distance: '徒歩2分' },
-    { icon: FaBook, name: '本屋', distance: '徒歩3分' },
-    { icon: FaUtensils, name: '八百屋', distance: '徒歩2分' },
-    { icon: FaShoppingBag, name: '古着屋', distance: '徒歩3分' },
-    { icon: FaStore, name: 'サンディ（スーパー）', distance: '徒歩5分' },
+    { icon: FaStore, name: '商店街' },
+    { icon: FaShoppingBag, name: 'コンビニ' },
+    { icon: FaDumbbell, name: 'トレーニングジム' },
+    { icon: FaCoffee, name: 'カフェ' },
+    { icon: FaBook, name: '本屋' },
+    { icon: FaUtensils, name: '八百屋' },
+    { icon: FaShoppingBag, name: '古着屋' },
+    { icon: FaStore, name: 'サンディ（スーパー）' },
   ]
 
   return (
@@ -44,7 +44,7 @@ const AccessSection = () => {
           >
             <div className="aspect-square bg-nodoka-gray rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2087654321!2d135.1234567!3d34.6581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM5JzI5LjIiTiAxMzXCsDA3JzI0LjQiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.422678134136!2d135.12711787581102!3d34.66928027293086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600085be37888db9%3A0xa498873f0a2e91ad!2z44CSNjU0LTAwMDEg5YW15bqr55yM56We5oi45biC6aCI56Oo5Yy656aF5piM5a-655S677yR5LiB55uu77yS77yX4oiS77yV!5e0!3m2!1sja!2sjp!4v1760762893783!5m2!1sja!2sjp" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -113,10 +113,7 @@ const AccessSection = () => {
                 {facilities.map((facility, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <facility.icon className="text-nodoka-orange flex-shrink-0" size={16} />
-                    <div className="flex justify-between w-full">
-                      <p className="font-medium text-nodoka-dark text-sm">{facility.name}</p>
-                      <p className="text-nodoka-dark/70 text-sm">{facility.distance}</p>
-                    </div>
+                    <p className="font-medium text-nodoka-dark text-sm">{facility.name}</p>
                   </div>
                 ))}
               </div>
