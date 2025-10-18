@@ -1,13 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
-import { FaMapMarkerAlt, FaTrain, FaCar, FaShoppingBag, FaUtensils, FaHospital, FaBook, FaDumbbell, FaCoffee, FaStore } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaTrain, FaCar, FaShoppingBag, FaUtensils, FaBook, FaDumbbell, FaCoffee, FaStore } from 'react-icons/fa'
 
 const AccessSection = () => {
-  const mapRef = useRef<HTMLDivElement>(null)
-  const [mapLoaded, setMapLoaded] = useState(false)
-
   const facilities = [
     { icon: FaStore, name: '商店街', distance: '板宿駅直結' },
     { icon: FaShoppingBag, name: 'コンビニ', distance: '徒歩1分' },
@@ -18,62 +14,6 @@ const AccessSection = () => {
     { icon: FaShoppingBag, name: '古着屋', distance: '徒歩3分' },
     { icon: FaStore, name: 'サンディ（スーパー）', distance: '徒歩5分' },
   ]
-
-  useEffect(() => {
-    const loadMap = async () => {
-      try {
-        const { Loader } = await import('@googlemaps/js-api-loader')
-        
-        const loader = new Loader({
-          apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
-          version: 'weekly',
-          libraries: ['places']
-        })
-
-        await loader.load()
-
-        if (mapRef.current) {
-          const map = new google.maps.Map(mapRef.current, {
-            center: { lat: 34.6581, lng: 135.1234 }, // 神戸市須磨区禅昌寺町の座標
-            zoom: 16,
-            mapTypeControl: false,
-            streetViewControl: false,
-            fullscreenControl: false,
-            styles: [
-              {
-                featureType: 'poi',
-                elementType: 'labels',
-                stylers: [{ visibility: 'off' }]
-              }
-            ]
-          })
-
-          new google.maps.Marker({
-            position: { lat: 34.6581, lng: 135.1234 },
-            map: map,
-            title: 'シェアハウス のどか',
-            icon: {
-              url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="18" fill="#FF6B35" stroke="#fff" stroke-width="2"/>
-                  <text x="20" y="26" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">N</text>
-                </svg>
-              `),
-              scaledSize: new google.maps.Size(40, 40),
-              anchor: new google.maps.Point(20, 20)
-            }
-          })
-
-          setMapLoaded(true)
-        }
-      } catch (error) {
-        console.error('Google Maps loading error:', error)
-        setMapLoaded(false)
-      }
-    }
-
-    loadMap()
-  }, [])
 
   return (
     <section className="py-20 bg-white">
@@ -103,19 +43,16 @@ const AccessSection = () => {
             className="relative"
           >
             <div className="aspect-square bg-nodoka-gray rounded-2xl overflow-hidden shadow-lg">
-              <div 
-                ref={mapRef} 
-                className="w-full h-full"
-                style={{ minHeight: '400px' }}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2087654321!2d135.1234567!3d34.6581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM5JzI5LjIiTiAxMzXCsDA3JzI0LjQiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="シェアハウスのどか 地図"
               />
-              {!mapLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-nodoka-gray">
-                  <div className="text-center">
-                    <FaMapMarkerAlt className="text-nodoka-orange text-4xl mx-auto mb-4" />
-                    <p className="text-nodoka-dark/60">地図を読み込み中...</p>
-                  </div>
-                </div>
-              )}
             </div>
           </motion.div>
 
