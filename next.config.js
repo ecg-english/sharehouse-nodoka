@@ -7,6 +7,7 @@ const nextConfig = {
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? '/sharehouse-nodoka' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/sharehouse-nodoka' : '',
+  distDir: 'out',
 }
 
 module.exports = nextConfig
