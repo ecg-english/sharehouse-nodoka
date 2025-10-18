@@ -29,7 +29,7 @@
 - **スタイリング**: Tailwind CSS
 - **アニメーション**: Framer Motion
 - **アイコン**: React Icons
-- **地図**: Leaflet (将来実装予定)
+- **地図**: Google Maps JavaScript API
 
 ## 🚀 セットアップ
 
@@ -50,12 +50,32 @@ cd NodokaSharehouse
 npm install
 ```
 
-3. 開発サーバーを起動
+3. 環境変数の設定
+```bash
+# .env.local ファイルを作成
+touch .env.local
+```
+
+`.env.local` ファイルに以下を追加：
+```env
+# Google Maps API Key
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+```
+
+**Google Maps API キーの取得方法：**
+1. [Google Cloud Console](https://console.cloud.google.com/) にアクセス
+2. 新しいプロジェクトを作成または既存のプロジェクトを選択
+3. 「APIs & Services」→「Credentials」に移動
+4. 「Create Credentials」→「API Key」を選択
+5. 生成されたAPIキーをコピーして `.env.local` に設定
+6. 「APIs & Services」→「Library」で「Maps JavaScript API」を有効化
+
+4. 開発サーバーを起動
 ```bash
 npm run dev
 ```
 
-4. ブラウザで http://localhost:3000 を開く
+5. ブラウザで http://localhost:3000 を開く
 
 ### ビルドとデプロイ
 
@@ -118,8 +138,8 @@ NodokaSharehouse/
 - [x] 管理者機能（基本）
 
 ### フェーズ2
+- [x] Google Maps埋め込み
 - [ ] Instagram API連携
-- [ ] 地図の埋め込み（Leaflet）
 - [ ] お問い合わせフォーム
 - [ ] SEO最適化
 
@@ -145,6 +165,8 @@ public/images/
 
 ## 📞 お問い合わせ
 
+- **住所**: 〒654-0001 兵庫県神戸市須磨区禅昌寺町1丁目27-5
+- **アクセス**: 板宿駅（神戸市営地下鉄・阪神電鉄）から徒歩15分
 - **電話**: 078-381-8061
 - **メール**: info@nodoka-sharehouse.com
 - **LINE**: @nodoka-sharehouse

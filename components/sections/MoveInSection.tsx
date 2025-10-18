@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FaArrowRight, FaEnvelope, FaEye, FaKey, FaSparkles, FaRocket } from 'react-icons/fa'
+import { FaArrowRight, FaEnvelope, FaEye, FaKey, FaStar, FaPlay } from 'react-icons/fa'
 
 const MoveInSection = () => {
   const steps = [
@@ -48,11 +48,11 @@ const MoveInSection = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <FaSparkles className="text-nodoka-orange text-2xl mr-3" />
+            <FaStar className="text-nodoka-orange text-2xl mr-3" />
             <h2 className="text-4xl md:text-6xl font-bold text-nodoka-dark">
               入居案内
             </h2>
-            <FaSparkles className="text-nodoka-orange text-2xl ml-3" />
+            <FaStar className="text-nodoka-orange text-2xl ml-3" />
           </div>
           <p className="text-xl md:text-2xl text-nodoka-dark/70 max-w-3xl mx-auto leading-relaxed">
             のどかでの新しい生活を始めませんか？
@@ -128,7 +128,7 @@ const MoveInSection = () => {
         >
           <div className="bg-gradient-to-r from-nodoka-orange to-nodoka-orange-light rounded-3xl p-8 shadow-2xl">
             <div className="flex items-center justify-center mb-4">
-              <FaRocket className="text-white text-3xl mr-3" />
+              <FaPlay className="text-white text-3xl mr-3" />
               <h3 className="text-2xl font-bold text-white">
                 さあ、始めましょう！
               </h3>
