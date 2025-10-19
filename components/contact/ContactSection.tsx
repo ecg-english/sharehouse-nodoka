@@ -49,25 +49,8 @@ const ContactSection = () => {
   ]
 
   return (
-    <section className="pt-20 pb-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <AnimatedTitle
-            text="お問い合わせ"
-            delay={0.2}
-            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
-          />
-          <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto">
-            シェアハウスのどかに関するご質問やご相談がございましたら、
-            お気軽にお問い合わせください
-          </p>
-        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {contactMethods.map((method, index) => (

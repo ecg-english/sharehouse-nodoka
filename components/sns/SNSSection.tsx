@@ -95,7 +95,7 @@ const SNSSection = () => {
   }
 
   return (
-    <section className="pt-20 pb-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,14 +104,6 @@ const SNSSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <AnimatedTitle
-            text="SNS"
-            delay={0.2}
-            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
-          />
-          <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto mb-8">
-            シェアハウスのどかの日常やイベントの様子をInstagramで発信しています
-          </p>
           
           <a
             href="https://www.instagram.com/sharehouse_nodoka"
