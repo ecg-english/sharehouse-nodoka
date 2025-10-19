@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FaInstagram, FaHeart, FaComment, FaShare } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+import AnimatedTitle from '../AnimatedTitle'
 
 interface InstagramPost {
   id: string
@@ -103,9 +104,11 @@ const SNSSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6">
-            SNS
-          </h1>
+          <AnimatedTitle
+            text="SNS"
+            delay={0.2}
+            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
+          />
           <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto mb-8">
             シェアハウスのどかの日常やイベントの様子をInstagramで発信しています
           </p>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import AnimatedTitle from '../AnimatedTitle'
 
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -130,9 +131,11 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6">
-            よくある質問
-          </h1>
+          <AnimatedTitle
+            text="よくある質問"
+            delay={0.2}
+            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
+          />
           <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto">
             シェアハウスのどかに関するよくあるご質問にお答えします
           </p>

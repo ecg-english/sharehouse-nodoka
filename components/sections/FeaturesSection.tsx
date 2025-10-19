@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import AnimatedTitle from '../AnimatedTitle'
 
 const FeaturesSection = () => {
   const features = [
@@ -32,9 +33,12 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6">
-            特徴
-          </h2>
+          <AnimatedTitle
+            text="特徴"
+            delay={0.2}
+            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
+            as="h2"
+          />
           <div className="w-16 h-1 bg-nodoka-orange mx-auto"></div>
         </motion.div>
 

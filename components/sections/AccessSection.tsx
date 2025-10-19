@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaMapMarkerAlt, FaTrain, FaCar, FaShoppingBag, FaUtensils, FaBook, FaDumbbell, FaCoffee, FaStore } from 'react-icons/fa'
+import AnimatedTitle from '../AnimatedTitle'
 
 const AccessSection = () => {
   const facilities = [
@@ -25,9 +26,12 @@ const AccessSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6">
-            アクセス
-          </h2>
+          <AnimatedTitle
+            text="アクセス"
+            delay={0.2}
+            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
+            as="h2"
+          />
           <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto">
             神戸市須磨区の便利な立地に位置しています
           </p>

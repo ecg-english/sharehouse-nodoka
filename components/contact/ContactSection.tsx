@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaPhone, FaLine, FaEnvelope, FaInstagram, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import AnimatedTitle from '../AnimatedTitle'
 
 const ContactSection = () => {
   const contactMethods = [
@@ -57,9 +58,11 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6">
-            お問い合わせ
-          </h1>
+          <AnimatedTitle
+            text="お問い合わせ"
+            delay={0.2}
+            className="text-4xl md:text-5xl font-bold text-nodoka-dark mb-6"
+          />
           <p className="text-xl text-nodoka-dark/70 max-w-3xl mx-auto">
             シェアハウスのどかに関するご質問やご相談がございましたら、
             お気軽にお問い合わせください

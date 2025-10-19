@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { FaHome, FaChevronRight } from 'react-icons/fa'
+import AnimatedTitle from '../AnimatedTitle'
+import AnimatedOrangeSubtitle from '../AnimatedOrangeSubtitle'
 
 const MoveInGuideHero = () => {
   return (
@@ -26,41 +28,11 @@ const MoveInGuideHero = () => {
             className="mb-16"
           >
             <div className="mb-12">
-              <h1 className="text-5xl md:text-7xl font-bold text-nodoka-dark mb-8 tracking-tight flex justify-center items-center">
-                {['入', '居', '案', '内'].map((char, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ 
-                      opacity: 0, 
-                      x: -150, 
-                      rotateZ: -360,
-                      scale: 0.5
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0, 
-                      rotateZ: 0,
-                      scale: 1
-                    }}
-                    transition={{ 
-                      duration: 1.0, 
-                      delay: 0.2 + (index * 0.15), 
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                      type: "spring",
-                      stiffness: 120,
-                      damping: 12
-                    }}
-                    className="inline-block"
-                    style={{
-                      textShadow: '0 4px 20px rgba(255, 107, 53, 0.1)',
-                      letterSpacing: '-0.02em',
-                      transformStyle: 'preserve-3d'
-                    }}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </h1>
+              <AnimatedTitle
+                text="入居案内"
+                delay={0.2}
+                className="text-5xl md:text-7xl font-bold text-nodoka-dark mb-8 tracking-tight"
+              />
               
               <motion.div 
                 initial={{ scaleX: 0, opacity: 0 }}
@@ -86,17 +58,11 @@ const MoveInGuideHero = () => {
               <p className="text-xl md:text-2xl text-nodoka-dark/80 leading-relaxed font-medium mb-4">
                 のどかでの新しい生活を始めませんか？
               </p>
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-                className="text-lg md:text-xl text-nodoka-orange font-semibold tracking-wide"
-                style={{
-                  textShadow: '0 2px 10px rgba(255, 107, 53, 0.2)'
-                }}
-              >
-                素敵な出会いが待っています
-              </motion.p>
+              <AnimatedOrangeSubtitle
+                text="素敵な出会いが待っています"
+                delay={1.2}
+                className="text-lg md:text-xl"
+              />
             </motion.div>
           </motion.div>
         </div>
