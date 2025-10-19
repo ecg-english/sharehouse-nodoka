@@ -8,9 +8,9 @@ const ContactSection = () => {
     {
       icon: FaPhone,
       title: 'お電話でのお問い合わせ',
-      description: '平日の営業時間内にお電話ください',
+      description: 'いつでもお気軽にお電話ください',
       detail: '078-381-8061',
-      subDetail: '受付時間: 月曜〜金曜 10:00〜17:00',
+      subDetail: '受付時間: 24時間いつでもお気軽にご連絡ください',
       color: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
       link: 'tel:078-381-8061',
@@ -118,12 +118,12 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-xl font-bold text-nodoka-dark mb-3">住所</h3>
                   <div className="space-y-2">
-                    <p className="text-lg font-semibold text-nodoka-dark">〒650-0013</p>
+                    <p className="text-lg font-semibold text-nodoka-dark">〒654-0001</p>
                     <p className="text-nodoka-dark/80">
-                      兵庫県神戸市中央区花隈町17-14
+                      兵庫県神戸市須磨区禅昌寺町1丁目27-5
                     </p>
                     <p className="text-nodoka-dark/80">
-                      株式会社神戸なでしこマネジメント
+                      シェアハウスのどか
                     </p>
                   </div>
                 </div>
@@ -141,15 +141,12 @@ const ContactSection = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-nodoka-dark/80">平日</span>
-                      <span className="font-semibold text-nodoka-dark">10:00 - 17:00</span>
+                      <span className="font-semibold text-nodoka-dark">24時間いつでもお気軽にご連絡ください</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-nodoka-dark/80">土日祝</span>
-                      <span className="font-semibold text-nodoka-dark">定休日</span>
+                      <span className="font-semibold text-nodoka-dark">24時間いつでもお気軽にご連絡ください</span>
                     </div>
-                    <p className="text-sm text-nodoka-dark/60 mt-3">
-                      ※見学は平日のみ承っております
-                    </p>
                   </div>
                 </div>
               </div>
@@ -174,7 +171,7 @@ const ContactSection = () => {
               まずはこちらをご確認ください。
             </p>
             <a
-              href="/faq"
+              href="/sharehouse-nodoka/faq"
               className="btn-secondary text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               FAQを見る
