@@ -123,7 +123,7 @@ const ContactSection = () => {
                       兵庫県神戸市須磨区禅昌寺町1丁目27-5
                     </p>
                     <p className="text-nodoka-dark/80">
-                      シェアハウスのどか
+                      シェアハウス のどか
                     </p>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const ContactSection = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-nodoka-dark/80">土日祝</span>
-                      <span className="font-semibold text-nodoka-dark">24時間いつでもお気軽にご連絡ください</span>
+                      <span className="font-semibold text-nodoka-dark">　24時間いつでもお気軽にご連絡ください</span>
                     </div>
                   </div>
                 </div>
