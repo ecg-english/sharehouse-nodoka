@@ -97,9 +97,9 @@ const StepDetails = () => {
       ],
       address: {
         title: '郵送またはご持参いただく場合',
-        postalCode: '〒650-0013',
-        address: '兵庫県神戸市中央区花隈町17-14',
-        company: '株式会社神戸なでしこマネジメント',
+        postalCode: '〒654-0001',
+        address: '兵庫県神戸市須磨区禅昌寺町1丁目27-5',
+        company: 'シェアハウス のどか',
       },
     },
     {
