@@ -1,71 +1,93 @@
 'use client'
 
+import { motion } from 'framer-motion'
+import { FaHome, FaArrowRight, FaStar } from 'react-icons/fa'
+
 const MoveInGuideHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      {/* Background with gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-nodoka-orange/20 to-nodoka-orange-light/30">
-          <img
-            src="/images/movein-hero-bg.jpg"
-            alt="入居案内"
-            className="w-full h-full object-cover opacity-80"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none'
-            }}
-          />
+        <div className="w-full h-full bg-gradient-to-br from-nodoka-orange/10 via-white to-nodoka-orange-light/10">
+          {/* Decorative elements */}
+          <div className="absolute top-20 left-20 w-32 h-32 bg-nodoka-orange/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
+          <div className="absolute top-40 right-20 w-24 h-24 bg-nodoka-orange-light/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
+          <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-nodoka-orange/15 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Background image with overlay text */}
-          <div className="relative">
-            <div className="aspect-[4/3] bg-nodoka-gray rounded-2xl overflow-hidden">
-              <img
-                src="/images/movein-hero-bg.jpg"
-                alt="入居案内"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <div className="absolute bottom-8 left-8">
-                <div className="flex space-x-2">
-                  <span className="text-6xl font-bold text-yellow-400">G</span>
-                  <span className="text-6xl font-bold text-blue-400">U</span>
-                  <span className="text-6xl font-bold text-white">I</span>
-                  <span className="text-6xl font-bold text-blue-400">D</span>
-                  <span className="text-6xl font-bold text-blue-400">E</span>
+        <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <FaStar className="text-nodoka-orange text-3xl mr-4" />
+              <h1 className="text-5xl md:text-7xl font-bold text-nodoka-dark">
+                入居案内
+              </h1>
+              <FaStar className="text-nodoka-orange text-3xl ml-4" />
+            </div>
+            <p className="text-xl md:text-2xl text-nodoka-dark/70 max-w-3xl mx-auto leading-relaxed">
+              のどかでの新しい生活を始めませんか？
+              <br />
+              <span className="text-nodoka-orange font-semibold">素敵な出会い</span>が待っています✨
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-nodoka-orange/20">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-nodoka-orange rounded-full flex items-center justify-center">
+                  <FaHome className="text-white text-xl" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-nodoka-dark">新しいお家</p>
+                  <p className="text-sm text-nodoka-dark/70">素敵な住人と共に</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right side - Title */}
-          <div className="text-center lg:text-left">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-12 shadow-xl">
-              <h1 className="text-6xl font-bold text-nodoka-dark mb-8 writing-vertical">
-                入居案内
-              </h1>
+            
+            <FaArrowRight className="text-nodoka-orange text-2xl hidden sm:block" />
+            
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-nodoka-orange/20">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-nodoka-orange rounded-full flex items-center justify-center">
+                  <FaStar className="text-white text-xl" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-nodoka-dark">素敵な出会い</p>
+                  <p className="text-sm text-nodoka-dark/70">人生を豊かにする</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Breadcrumbs */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border border-nodoka-orange/20"
+        >
           <div className="flex items-center space-x-2 text-nodoka-dark">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-            </svg>
+            <FaHome className="w-4 h-4" />
             <span className="text-gray-400">&gt;</span>
             <span className="font-medium">入居案内</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
