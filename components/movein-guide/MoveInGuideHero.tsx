@@ -26,33 +26,48 @@ const MoveInGuideHero = () => {
             className="mb-16"
           >
             <div className="mb-12">
-              <motion.h1 
-                initial={{ opacity: 0, x: -100, rotateY: -90 }}
-                animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                transition={{ 
-                  duration: 1.2, 
-                  delay: 0.2, 
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 15
-                }}
-                className="text-5xl md:text-7xl font-bold text-nodoka-dark mb-8 tracking-tight"
-                style={{
-                  textShadow: '0 4px 20px rgba(255, 107, 53, 0.1)',
-                  letterSpacing: '-0.02em',
-                  transformStyle: 'preserve-3d'
-                }}
-              >
-                入居案内
-              </motion.h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-nodoka-dark mb-8 tracking-tight flex justify-center items-center">
+                {['入', '居', '案', '内'].map((char, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ 
+                      opacity: 0, 
+                      x: -150, 
+                      rotateZ: -360,
+                      scale: 0.5
+                    }}
+                    animate={{ 
+                      opacity: 1, 
+                      x: 0, 
+                      rotateZ: 0,
+                      scale: 1
+                    }}
+                    transition={{ 
+                      duration: 1.0, 
+                      delay: 0.2 + (index * 0.15), 
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                      type: "spring",
+                      stiffness: 120,
+                      damping: 12
+                    }}
+                    className="inline-block"
+                    style={{
+                      textShadow: '0 4px 20px rgba(255, 107, 53, 0.1)',
+                      letterSpacing: '-0.02em',
+                      transformStyle: 'preserve-3d'
+                    }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </h1>
               
               <motion.div 
                 initial={{ scaleX: 0, opacity: 0 }}
                 animate={{ scaleX: 1, opacity: 1 }}
                 transition={{ 
                   duration: 0.8, 
-                  delay: 1.0, 
+                  delay: 0.8, 
                   ease: "easeOut" 
                 }}
                 className="w-32 h-1 bg-gradient-to-r from-transparent via-nodoka-orange to-transparent mx-auto mb-8"
@@ -65,7 +80,7 @@ const MoveInGuideHero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
               className="max-w-3xl mx-auto"
             >
               <p className="text-xl md:text-2xl text-nodoka-dark/80 leading-relaxed font-medium mb-4">
@@ -74,7 +89,7 @@ const MoveInGuideHero = () => {
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
                 className="text-lg md:text-xl text-nodoka-orange font-semibold tracking-wide"
                 style={{
                   textShadow: '0 2px 10px rgba(255, 107, 53, 0.2)'
@@ -92,7 +107,7 @@ const MoveInGuideHero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.6 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
           className="bg-white/95 backdrop-blur-sm rounded-full px-8 py-4 shadow-lg border border-gray-200/50 hover:shadow-xl transition-all duration-300"
           style={{
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
