@@ -20,6 +20,18 @@ const HeroSection = () => {
       src: '/images/hero3.jpg',
       alt: '個室 - プライベートな時間を過ごす落ち着いた空間',
     },
+    {
+      src: '/images/hero4.jpg',
+      alt: 'ダイニングエリア - みんなで食事を楽しむ空間',
+    },
+    {
+      src: '/images/hero5.jpg',
+      alt: 'バスルーム - 清潔で快適な入浴空間',
+    },
+    {
+      src: '/images/hero6.jpg',
+      alt: 'ベランダ - 自然を感じながらリラックスできる空間',
+    },
   ]
 
   const thumbnailImages = [
@@ -31,6 +43,14 @@ const HeroSection = () => {
     { src: '/images/thumb6.jpg', alt: '共有スペース' },
     { src: '/images/thumb7.jpg', alt: 'キッチン' },
     { src: '/images/thumb8.jpg', alt: 'エントランス' },
+    { src: '/images/thumb9.jpg', alt: '洗面所' },
+    { src: '/images/thumb10.jpg', alt: 'ベランダ' },
+    { src: '/images/thumb11.jpg', alt: '玄関' },
+    { src: '/images/thumb12.jpg', alt: '書斎スペース' },
+    { src: '/images/thumb13.jpg', alt: '洗濯機置き場' },
+    { src: '/images/thumb14.jpg', alt: '収納スペース' },
+    { src: '/images/thumb15.jpg', alt: '共有デスク' },
+    { src: '/images/thumb16.jpg', alt: '屋外スペース' },
   ]
 
   const nextImage = () => {

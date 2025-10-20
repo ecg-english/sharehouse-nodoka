@@ -43,6 +43,42 @@ const GallerySection = () => {
       description: '自然を感じながらリラックスできる空間',
       image: '/images/room6.jpg',
     },
+    {
+      id: 7,
+      name: 'ダイニングエリア',
+      description: 'みんなで食事を楽しむ温かい空間',
+      image: '/images/room7.jpg',
+    },
+    {
+      id: 8,
+      name: '玄関',
+      description: 'お迎えする明るいエントランス',
+      image: '/images/room8.jpg',
+    },
+    {
+      id: 9,
+      name: '書斎スペース',
+      description: '集中して作業できる静かな空間',
+      image: '/images/room9.jpg',
+    },
+    {
+      id: 10,
+      name: '洗濯機置き場',
+      description: '便利で使いやすいランドリーエリア',
+      image: '/images/room10.jpg',
+    },
+    {
+      id: 11,
+      name: '収納スペース',
+      description: '整理整頓された収納エリア',
+      image: '/images/room11.jpg',
+    },
+    {
+      id: 12,
+      name: '共有デスク',
+      description: 'みんなで使えるワークスペース',
+      image: '/images/room12.jpg',
+    },
   ]
 
   return (
